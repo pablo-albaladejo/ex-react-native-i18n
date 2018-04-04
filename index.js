@@ -2,7 +2,7 @@ import I18n from './vendor/i18n';
 import Expo from 'expo';
 
 I18n.initAsync = async () => {
-  const locale = await Expo.Util.getCurrentLocaleAsync();
+  const locale = await Expo.DangerZone.Localization.getCurrentLocaleAsync();
   I18n.locale = (locale) ? locale.replace(/_/, '-') : '';
 }
 
